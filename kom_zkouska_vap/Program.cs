@@ -36,7 +36,7 @@ namespace kom_zkouska_vap
                             Console.WriteLine("Číslo je kladné.");
                         }
 
-                        else //Záporné čísla
+                        if (cislo1<=-1)
                         {
                             Console.WriteLine("Číslo je záporné.");
                         }
@@ -47,10 +47,10 @@ namespace kom_zkouska_vap
            
             Console.WriteLine("Zadejte číslo: ");
             float prvni2 = float.Parse(Console.ReadLine());
-            Console.WriteLine("Jakou chcete operaci? 1 - součet 2 - rozdíl 3 - součin 4 - podíl"); //Napíšeme z důvodu, protože budeme používat switch.
-            int volba2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Zadejte druhé číslo: ");
             float druhe2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Jakou chcete operaci? 1 - součet 2 - rozdíl 3 - součin 4 - podíl"); //Napíšeme z důvodu, protože budeme používat switch.
+            int volba2 = Convert.ToInt32(Console.ReadLine());
 
             switch (volba2) //napíšeme název proměnné, kde uživatel zadával danou volbu, v tomhle případě je název proměnné "volba".
             {
@@ -74,7 +74,7 @@ namespace kom_zkouska_vap
                     Console.WriteLine("Zvolená volba neexistuje."); //default se používá z toho důvodu, když uživatel vybere jinou možnost než z daného výběru.
                 break;
             }
-
+            
             Console.ReadKey();
            
             /*3 – PROGRAM, KTERÝ ZJISTÍ JESTLI JE ZADANÉ ČÍSLO LICHÉ, SUDÉ NEBO NULA*/
@@ -87,12 +87,12 @@ namespace kom_zkouska_vap
                 Console.WriteLine("Zadané číslo je nula.");
             }
 
-            if (cislo3%2 == 0) //[NÁZEV PROMĚNNÉ] [% – MODULO NEBOLI PROCENTO] [DVĚ == Z DŮVODU PROVONÁVÁNÍ HODNOTY]
+       else if (cislo3%2 == 0) //[NÁZEV PROMĚNNÉ] [% – MODULO NEBOLI PROCENTO] [DVĚ == Z DŮVODU PROVONÁVÁNÍ HODNOTY]
             {
                 Console.WriteLine("Zadané číslo je sudé.");
             }
 
-            else //Napíšeme už else, protože nepotřebujeme dále rozepisovat podmínku.
+            if (cislo3%2 == 1)
             {
                 Console.WriteLine("Zadané číslo je liché.");
             }
@@ -107,7 +107,7 @@ namespace kom_zkouska_vap
             if (pocetcisel4 <= 0) //Tuhle podmínku použijeme pokaždé, když v programu bude uživatel zadávat např. počet čísel. To z toho důvodu, abychom si ošetřili, že hodnota nejde pod nulu nebo není nula.
             {
                 Console.WriteLine("Neplatný počet čísel.");
-                return; //return vrátí zpátky na "Zadejte počet čísel: "
+                return;
             }
 
             float soucet4 = 0; //Nastavíme hodnotu proměnné na nulu
@@ -208,7 +208,7 @@ namespace kom_zkouska_vap
                 {
                     nuly7++; 
                 }
-                if (cislo7 >= 1)
+           else if (cislo7 >= 1)
                 {
                     kladne7++;
                 }
@@ -246,11 +246,11 @@ namespace kom_zkouska_vap
                 {
                     nuly8++;
                 }
-                if (cislo8 % 2 == 0)
+           else if (cislo8 % 2 == 0)
                 {
                     suda8++;
                 }
-                else
+                if (cislo8 % 2 == 1)
                 {
                     licha8++;
                 }
