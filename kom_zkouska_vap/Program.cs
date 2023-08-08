@@ -21,17 +21,17 @@ namespace kom_zkouska_vap
             prázdná hodnota      null            -                    -
             */
 
-            /*PROGRAM, KTERÝ ZJISTÍ, JESTLI JE ZADANÉ ČÍSLO KLADNÉ, ZÁPORNÉ NEBO NULA*/
+            /*1 – PROGRAM, KTERÝ ZJISTÍ, JESTLI JE ZADANÉ ČÍSLO KLADNÉ, ZÁPORNÉ NEBO NULA*/
             
                         Console.WriteLine("Zadejte číslo: ");
-                        float cislo = float.Parse(Console.ReadLine());  //Použijeme float, kdyby uživatel chtěl zadat desetinné číslo, příkaz "float.Parse Console.ReadLine()" použijeme, aby uživatel měl možnost zadat hodnotu.
+                        float cislo1 = float.Parse(Console.ReadLine());  //Použijeme float, kdyby uživatel chtěl zadat desetinné číslo, příkaz "float.Parse Console.ReadLine()" použijeme, aby uživatel měl možnost zadat hodnotu.
 
-                        if (cislo == 0) //Použijeme 2 znaménka =, protože chceme, aby program porovnal zadanou hodnotu s 0.
+                        if (cislo1 == 0) //Použijeme 2 znaménka =, protože chceme, aby program porovnal zadanou hodnotu s 0.
                         {
                             Console.WriteLine("Číslo je nula.");
                         }
 
-                        if (cislo >= 1) //Použijeme znaménka >=, aby program se rozhodoval mezi číslem 1 a více.
+                        if (cislo1 >= 1) //Použijeme znaménka >=, aby program se rozhodoval mezi číslem 1 a více.
                         {
                             Console.WriteLine("Číslo je kladné.");
                         }
@@ -43,187 +43,63 @@ namespace kom_zkouska_vap
 
                         Console.ReadKey(); //Použijeme na konci každého programu či jakéhokoliv kódu, aby program čekal na ukončení uživatelem, program se ukončí jakoukoliv klávesou.
                        
-            /*KALKULAČKA*/
+            /*2 – KALKULAČKA*/
            
             Console.WriteLine("Zadejte číslo: ");
-            float prvni = float.Parse(Console.ReadLine());
-            Console.WriteLine("Jakou chcete operaci? 1 - součet 2 - rozdíl 3 - součin 4 - podíl");
-            int volba = Convert.ToInt32(Console.ReadLine());
+            float prvni2 = float.Parse(Console.ReadLine());
+            Console.WriteLine("Jakou chcete operaci? 1 - součet 2 - rozdíl 3 - součin 4 - podíl"); //Napíšeme z důvodu, protože budeme používat switch.
+            int volba2 = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Zadejte druhé číslo: ");
-            float druhe = float.Parse(Console.ReadLine());
+            float druhe2 = float.Parse(Console.ReadLine());
 
-            switch (volba)
+            switch (volba) //napíšeme název proměnné, kde uživatel zadával danou volbu, v tomhle případě je název proměnné "volba".
             {
                 case 1:
-                    Console.WriteLine(prvni + druhe);
+                    Console.WriteLine(prvni2 + druhe2);
                 break;
 
                 case 2:
-                    Console.WriteLine(prvni - druhe);
+                    Console.WriteLine(prvni2 - druhe2);
                 break;
 
                 case 3:
-                    Console.WriteLine(prvni * druhe);
+                    Console.WriteLine(prvni2 * druhe2);
                 break;
 
                 case 4:
-                    Console.WriteLine(prvni / druhe);
+                    Console.WriteLine(prvni2 / druhe2);
                 break;
 
                 default:
-                    Console.WriteLine("Zvolená hodnota neexistuje.");
+                    Console.WriteLine("Zvolená hodnota neexistuje."); //default se používá z toho důvodu, když uživatel vybere jinou možnost než z daného výběru.
                 break;
             }
 
             Console.ReadKey();
            
-            /*PROGRAM, KTERÝ ZJISTÍ JESTLI JE ZADANÉ ČÍSLO LICHÉ, SUDÉ NEBO NULA*/
+            /*3 – PROGRAM, KTERÝ ZJISTÍ JESTLI JE ZADANÉ ČÍSLO LICHÉ, SUDÉ NEBO NULA*/
            
             Console.WriteLine("Zadejte číslo: ");
-            float cislo1 = float.Parse(Console.ReadLine());
+            float cislo3 = float.Parse(Console.ReadLine());
 
-            if (cislo1 == 0)
+            if (cislo3 == 0)
             {
                 Console.WriteLine("Zadané číslo je nula.");
             }
 
-            if (cislo1%2 == 0)
+            if (cislo3%2 == 0) //[NÁZEV PROMĚNNÉ] [% – MODULO NEBOLI PROCENTO] [DVĚ == Z DŮVODU PROVONÁVÁNÍ HODNOTY]
             {
                 Console.WriteLine("Zadané číslo je sudé.");
             }
 
-            else
+            else //Napíšeme už else, protože nepotřebujeme dále rozepisovat podmínku.
             {
                 Console.WriteLine("Zadané číslo je liché.");
             }
 
             Console.ReadKey();
            
-            /*PRŮMĚR ZE ZADANÝCH ČÍSEL*/
-
-            Console.WriteLine("Zadejte počet čísel: ");
-            int pocetCisel = Convert.ToInt32(Console.ReadLine());
-
-            if (pocetCisel <= 0)
-            {
-                Console.WriteLine("Neplatný počet čísel.");
-                return;
-            }
-
-            float soucetPrumer = 0;
-
-            for (int i = 1; i <= pocetCisel; i++)
-            {
-                Console.WriteLine("Zadejte číslo: ");
-                float cisloPrumer = float.Parse(Console.ReadLine());
-                soucetPrumer += cisloPrumer;
-            }
-
-            double prumer = soucetPrumer / pocetCisel;
-            Console.WriteLine(prumer);
-
-            Console.ReadKey();
-
-            /*SOUČET ZE ZADANÝCH ČÍSEL*/
-
-            Console.WriteLine("Zadejte počet čísel: ");
-            int CislaSoucet = Convert.ToInt32(Console.ReadLine());
-
-            if (CislaSoucet <= 0)
-            {
-                Console.WriteLine("Neplatný počet čísel.");
-                return;
-            }
-
-            float soucet = 0;
-
-            for (int i = 1; i <= CislaSoucet; i++)
-            {
-                Console.WriteLine("Zadejte číslo: ");
-                float cisloSoucet = float.Parse(Console.ReadLine());
-                soucet += cisloSoucet;
-            }
-
-            double Soucet = soucet;
-            Console.WriteLine(Soucet);
-
-            Console.ReadKey();
-
-            /*MAXIMUM A MINIMUM POMOCÍ DOČASNÉ PROMĚNNÉ ZE ZADANÝCH ČÍSEL*/
-            
-            Console.WriteLine("Zadejte počet čísel: ");
-            int pocetCiselMaxMin = Convert.ToInt32(Console.ReadLine());
-
-            if (pocetCiselMaxMin <= 0)
-            {
-                Console.WriteLine("Neplatný počet čísel.");
-                return;
-            }
-
-            float max = float.MinValue; // Počáteční hodnota pro maximum
-            float min = float.MaxValue; // Počáteční hodnota pro minimum
-
-            for (int i = 1; i <= pocetCiselMaxMin; i++)
-            {
-                Console.WriteLine("Zadejte číslo: ");
-                float cisloMaxMin = float.Parse(Console.ReadLine());
-
-                // Porovnání pro maximum
-                if (cisloMaxMin > max)
-                {
-                    max = cislo;
-                }
-
-                // Porovnání pro minimum
-                if (cisloMaxMin < min)
-                {
-                    min = cislo;
-                }
-            }
-
-            Console.WriteLine("Maximum: " + max);
-            Console.WriteLine("Minimum: " + min);
-
-            /*POČET KLADNÝCH A ZÁPORNÝCH A NUL ZE ZADANÝCH ČÍSEL*/
-
-            Console.WriteLine("Zadejte počet čísel: ");
-            int pocetcisel3 = Convert.ToInt32(Console.ReadLine());
-
-            if (pocetcisel3 <= 0)
-            {
-                Console.WriteLine("Neplatný počet čísel.");
-                return;
-            }
-
-            int kladne = 0;
-            int zaporne = 0;
-            int nuly = 0;
-
-            for(int i = 1; i <= pocetcisel3; i++)
-            {
-                Console.WriteLine("Zadejte číslo: ");
-                float cislo3 = float.Parse(Console.ReadLine());
-
-                if (cislo3 == 0)
-                {
-                    nuly++;
-                }
-                if (cislo3 >= 1)
-                {
-                    kladne++;
-                }
-                else
-                {
-                    zaporne++;
-                }
-            }
-            Console.WriteLine("Kladné:" + kladne);
-            Console.WriteLine("Záporné: " + zaporne);
-            Console.WriteLine("Nuly: " + nuly);
-
-            Console.ReadKey();
-
-            /*POČET ČÍSEL SUDÝCH, LICHÝCH A NUL ZE ZADANÝCH ČÍSEL*/
+            /*4 – PRŮMĚR ZE ZADANÝCH ČÍSEL*/
 
             Console.WriteLine("Zadejte počet čísel: ");
             int pocetcisel4 = Convert.ToInt32(Console.ReadLine());
@@ -234,30 +110,154 @@ namespace kom_zkouska_vap
                 return;
             }
 
-            int suda = 0;
-            int licha = 0;
-            int nuly4 = 0;
+            float soucet4 = 0;
 
-            for(int i=1; i <= pocetcisel4; i++)
+            for (int i = 1; i <= pocetcisel4; i++)
             {
                 Console.WriteLine("Zadejte číslo: ");
                 float cislo4 = float.Parse(Console.ReadLine());
-                if(cislo4 == 0)
+                soucet4 += cislo4;
+            }
+
+            double prumer = soucet4 / pocetcisel4;
+            Console.WriteLine(prumer);
+
+            Console.ReadKey();
+
+            /*5 – SOUČET ZE ZADANÝCH ČÍSEL*/
+
+            Console.WriteLine("Zadejte počet čísel: ");
+            int Cisla5 = Convert.ToInt32(Console.ReadLine());
+
+            if (Cisla5 <= 0)
+            {
+                Console.WriteLine("Neplatný počet čísel.");
+                return;
+            }
+
+            float soucet5 = 0;
+
+            for (int i = 1; i <= Cisla5; i++)
+            {
+                Console.WriteLine("Zadejte číslo: ");
+                float cisloSoucet5 = float.Parse(Console.ReadLine());
+                soucet5 += cisloSoucet5;
+            }
+
+            double Soucet5 = soucet5;
+            Console.WriteLine(Soucet5);
+
+            Console.ReadKey();
+
+            /*6 – MAXIMUM A MINIMUM POMOCÍ DOČASNÉ PROMĚNNÉ ZE ZADANÝCH ČÍSEL*/
+            
+            Console.WriteLine("Zadejte počet čísel: ");
+            int pocetcisel6 = Convert.ToInt32(Console.ReadLine());
+
+            if (pocetcisel6 <= 0)
+            {
+                Console.WriteLine("Neplatný počet čísel.");
+                return;
+            }
+
+            float max6 = float.MinValue; // Počáteční hodnota pro maximum
+            float min6 = float.MaxValue; // Počáteční hodnota pro minimum
+
+            for (int i = 1; i <= pocetcisel6; i++)
+            {
+                Console.WriteLine("Zadejte číslo: ");
+                float cislo6 = float.Parse(Console.ReadLine());
+
+                // Porovnání pro maximum
+                if (cislo6 > max6)
                 {
-                    nuly4++;
+                    max6 = cislo6;
                 }
-                if (cislo4 % 2 == 0)
+
+                // Porovnání pro minimum
+                if (cislo6 < min6)
                 {
-                    suda++;
+                    min6 = cislo6;
+                }
+            }
+
+            Console.WriteLine("Maximum: " + max6);
+            Console.WriteLine("Minimum: " + min6);
+
+            /*7 – POČET KLADNÝCH A ZÁPORNÝCH A NUL ZE ZADANÝCH ČÍSEL*/
+
+            Console.WriteLine("Zadejte počet čísel: ");
+            int pocetcisel7 = Convert.ToInt32(Console.ReadLine());
+
+            if (pocetcisel7 <= 0)
+            {
+                Console.WriteLine("Neplatný počet čísel.");
+                return;
+            }
+
+            int kladne7 = 0;
+            int zaporne7 = 0;
+            int nuly7 = 0;
+
+            for(int i = 1; i <= pocetcisel7; i++)
+            {
+                Console.WriteLine("Zadejte číslo: ");
+                float cislo7 = float.Parse(Console.ReadLine());
+
+                if (cislo7 == 0)
+                {
+                    nuly7++;
+                }
+                if (cislo7 >= 1)
+                {
+                    kladne7++;
                 }
                 else
                 {
-                    licha++;
+                    zaporne7++;
                 }
             }
-            Console.WriteLine("Nuly: " + nuly4);
-            Console.WriteLine("Sudá: " + suda);
-            Console.WriteLine("Lichá: " + licha);
+            Console.WriteLine("Kladné:" + kladne7);
+            Console.WriteLine("Záporné: " + zaporne7);
+            Console.WriteLine("Nuly: " + nuly7);
+
+            Console.ReadKey();
+
+            /*8 – POČET ČÍSEL SUDÝCH, LICHÝCH A NUL ZE ZADANÝCH ČÍSEL*/
+
+            Console.WriteLine("Zadejte počet čísel: ");
+            int pocetcisel8 = Convert.ToInt32(Console.ReadLine());
+
+            if (pocetcisel8 <= 0)
+            {
+                Console.WriteLine("Neplatný počet čísel.");
+                return;
+            }
+
+            int suda8 = 0;
+            int licha8 = 0;
+            int nuly8 = 0;
+
+            for(int i=1; i <= pocetcisel8; i++)
+            {
+                Console.WriteLine("Zadejte číslo: ");
+                float cislo8 = float.Parse(Console.ReadLine());
+                if(cislo8 == 0)
+                {
+                    nuly8++;
+                }
+                if (cislo8 % 2 == 0)
+                {
+                    suda8++;
+                }
+                else
+                {
+                    licha8++;
+                }
+            }
+            Console.WriteLine("Nuly: " + nuly8);
+            Console.WriteLine("Sudá: " + suda8);
+            Console.WriteLine("Lichá: " + licha8);
 
             Console.ReadKey();
         }
