@@ -260,6 +260,8 @@ namespace kom_zkouska_vap
             Console.WriteLine("Lichá: " + licha8);
 
             Console.ReadKey();
+
         }
+        //Všechno zvládneš zlato, myslím na tebe a budu ti posílat vzdáleně sílu, ať to zvládneš, vše dobře dopadne, až bude po zkouškách, někam tě pozvu, miluju tě! <3
     }
 }
