@@ -52,7 +52,7 @@ namespace kom_zkouska_vap
             Console.WriteLine("Zadejte druhé číslo: ");
             float druhe2 = float.Parse(Console.ReadLine());
 
-            switch (volba) //napíšeme název proměnné, kde uživatel zadával danou volbu, v tomhle případě je název proměnné "volba".
+            switch (volba2) //napíšeme název proměnné, kde uživatel zadával danou volbu, v tomhle případě je název proměnné "volba".
             {
                 case 1:
                     Console.WriteLine(prvni2 + druhe2);
@@ -71,7 +71,7 @@ namespace kom_zkouska_vap
                 break;
 
                 default:
-                    Console.WriteLine("Zvolená hodnota neexistuje."); //default se používá z toho důvodu, když uživatel vybere jinou možnost než z daného výběru.
+                    Console.WriteLine("Zvolená volba neexistuje."); //default se používá z toho důvodu, když uživatel vybere jinou možnost než z daného výběru.
                 break;
             }
 
@@ -104,22 +104,22 @@ namespace kom_zkouska_vap
             Console.WriteLine("Zadejte počet čísel: ");
             int pocetcisel4 = Convert.ToInt32(Console.ReadLine());
 
-            if (pocetcisel4 <= 0)
+            if (pocetcisel4 <= 0) //Tuhle podmínku použijeme pokaždé, když v programu bude uživatel zadávat např. počet čísel. To z toho důvodu, abychom si ošetřili, že hodnota nejde pod nulu nebo není nula.
             {
                 Console.WriteLine("Neplatný počet čísel.");
-                return;
+                return; //return vrátí zpátky na "Zadejte počet čísel: "
             }
 
-            float soucet4 = 0;
+            float soucet4 = 0; //Nastavíme hodnotu proměnné na nulu
 
-            for (int i = 1; i <= pocetcisel4; i++)
+            for (int i = 1; i <= pocetcisel4; i++) //"for (promenna; podminka; prikaz)" v tomto případě platí jako: "for (int = i; i<= pocetcisel4; i++)" i++ je inkrementace neboli zvýšení hodnoty o jedna.
             {
                 Console.WriteLine("Zadejte číslo: ");
                 float cislo4 = float.Parse(Console.ReadLine());
-                soucet4 += cislo4;
-            }
+                soucet4 += cislo4; //Zde se hodnota proměnné, kterou jsem dříve nastavovali na nulu změní číslo, změní a sečte s číslem, které jsme zadali nyní.
+            } //Vše, co je ve složených závorkách, tak platí pro cyklus.
 
-            double prumer = soucet4 / pocetcisel4;
+            double prumer = soucet4 / pocetcisel4; //Nyní proběhne aritmetický průměr (součet čísel [DĚLENO] počtem zadaných čísel).
             Console.WriteLine(prumer);
 
             Console.ReadKey();
@@ -203,10 +203,10 @@ namespace kom_zkouska_vap
             {
                 Console.WriteLine("Zadejte číslo: ");
                 float cislo7 = float.Parse(Console.ReadLine());
-
+                //Píšeme podmínky, následně píšeme, co se má vykonat, když podmínka je ANO, zvyšujeme hodnotu proměnné o jedna, vždy píšeme proto dvě ++ (př.: nuly7++;)
                 if (cislo7 == 0)
                 {
-                    nuly7++;
+                    nuly7++; 
                 }
                 if (cislo7 >= 1)
                 {
@@ -262,6 +262,6 @@ namespace kom_zkouska_vap
             Console.ReadKey();
 
         }
-        //Všechno zvládneš zlato, myslím na tebe a budu ti posílat vzdáleně sílu, ať to zvládneš, vše dobře dopadne, až bude po zkouškách, někam tě pozvu, miluju tě! <3
+        //Všechno zvládneš zlato, myslím na tebe a budu ti posílat vzdáleně sílu, ať to zvládneš, vše dobře dopadne, až budeš mít po zkouškách, miluju tě! <3
     }
 }
