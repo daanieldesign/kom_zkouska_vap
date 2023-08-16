@@ -50,7 +50,7 @@ namespace kom_zkouska_vap
             Console.WriteLine("Zadejte druhé číslo: ");
             float druhe2 = float.Parse(Console.ReadLine());
             Console.WriteLine("Jakou chcete operaci? 1 - součet 2 - rozdíl 3 - součin 4 - podíl"); //Napíšeme z důvodu, protože budeme používat switch.
-            int volba2 = Convert.ToInt32(Console.ReadLine());
+            int volba2 = Convert.ToInt16(Console.ReadLine());
 
             switch (volba2) //napíšeme název proměnné, kde uživatel zadával danou volbu, v tomhle případě je název proměnné "volba".
             {
@@ -102,7 +102,7 @@ namespace kom_zkouska_vap
             /*4 – PRŮMĚR ZE ZADANÝCH ČÍSEL*/
 
             Console.WriteLine("Zadejte počet čísel: ");
-            int pocetcisel4 = Convert.ToInt32(Console.ReadLine());
+            int pocetcisel4 = Convert.ToInt16(Console.ReadLine());
 
             if (pocetcisel4 <= 0) //Tuhle podmínku použijeme pokaždé, když v programu bude uživatel zadávat např. počet čísel. To z toho důvodu, abychom si ošetřili, že hodnota nejde pod nulu nebo není nula.
             {
@@ -127,7 +127,7 @@ namespace kom_zkouska_vap
             /*5 – SOUČET ZE ZADANÝCH ČÍSEL*/
 
             Console.WriteLine("Zadejte počet čísel: ");
-            int Cisla5 = Convert.ToInt32(Console.ReadLine());
+            int Cisla5 = Convert.ToInt16(Console.ReadLine());
 
             if (Cisla5 <= 0)
             {
@@ -152,7 +152,7 @@ namespace kom_zkouska_vap
             /*6 – MAXIMUM A MINIMUM POMOCÍ DOČASNÉ PROMĚNNÉ ZE ZADANÝCH ČÍSEL*/
             
             Console.WriteLine("Zadejte počet čísel: ");
-            int pocetcisel6 = Convert.ToInt32(Console.ReadLine());
+            int pocetcisel6 = Convert.ToInt16(Console.ReadLine());
 
             if (pocetcisel6 <= 0)
             {
@@ -187,7 +187,7 @@ namespace kom_zkouska_vap
             /*7 – POČET KLADNÝCH A ZÁPORNÝCH A NUL ZE ZADANÝCH ČÍSEL*/
 
             Console.WriteLine("Zadejte počet čísel: ");
-            int pocetcisel7 = Convert.ToInt32(Console.ReadLine());
+            int pocetcisel7 = Convert.ToInt16(Console.ReadLine());
 
             if (pocetcisel7 <= 0)
             {
@@ -226,7 +226,7 @@ namespace kom_zkouska_vap
             /*8 – POČET ČÍSEL SUDÝCH, LICHÝCH A NUL ZE ZADANÝCH ČÍSEL*/
 
             Console.WriteLine("Zadejte počet čísel: ");
-            int pocetcisel8 = Convert.ToInt32(Console.ReadLine());
+            int pocetcisel8 = Convert.ToInt16(Console.ReadLine());
 
             if (pocetcisel8 <= 0)
             {
