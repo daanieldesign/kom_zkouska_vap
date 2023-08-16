@@ -67,7 +67,16 @@ namespace kom_zkouska_vap
                 break;
 
                 case 4:
+                    if (druhe2 == 0)
+                    {
+                        Console.WriteLine("Nulou nelze dělit.");
+                    return;
+                    }
+                    
+                    else
+                    {
                     Console.WriteLine(prvni2 / druhe2);
+                    }
                 break;
 
                 default:
