@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -89,7 +89,7 @@ namespace kom_zkouska_vap
             /*3 – PROGRAM, KTERÝ ZJISTÍ JESTLI JE ZADANÉ ČÍSLO LICHÉ, SUDÉ NEBO NULA*/
            
             Console.WriteLine("Zadejte číslo: ");
-            float cislo3 = float.Parse(Console.ReadLine());
+            int cislo3 = Convert.ToInt16(Console.ReadLine());
 
             if (cislo3 == 0)
             {
