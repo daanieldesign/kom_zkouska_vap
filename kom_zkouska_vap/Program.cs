@@ -152,8 +152,6 @@ namespace kom_zkouska_vap
                 float cisloSoucet5 = float.Parse(Console.ReadLine());
                 soucet5 += cisloSoucet5;
             }
-
-            double Soucet5 = soucet5;
             Console.WriteLine(Soucet5);
 
             Console.ReadKey();
